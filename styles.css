@@ -1,0 +1,246 @@
+/* Aplicar la tipografía de estilo similar a Apple */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo para el contenedor del título grande */
+#intro-title {
+    display: flex;
+    flex-direction: column;  /* Alinea los elementos en columna */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* Centra el contenido verticalmente */
+    height: 30vh;           /* Ocupa toda la altura de la ventana del navegador */
+    padding: 0 20px;        /* Ajusta el espaciado a los lados */
+    background-color: #f5f5f7; /* Color de fondo opcional */
+    text-align: center;     /* Centra el texto dentro del contenedor */
+}
+
+#intro-title h1 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 3rem; /* Tamaño del texto grande */
+    font-weight: bold;
+    color: #1d1d1f; /* Color del texto */
+    margin: 0 0 20px; /* Espacio debajo del encabezado */
+}
+
+#intro-title h3 {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1rem; /* Tamaño del texto más pequeño */
+    color: #333; /* Color del texto */
+    margin: 0;     /* Quita el margen predeterminado */
+    line-height: 1.6; /* Mejora la legibilidad con un mayor interlineado */
+    max-width: 800px; /* Opcional: limita el ancho del texto para evitar líneas largas */
+}
+
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #1d1d1f;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+nav .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #333;
+}
+
+/* Estilos adicionales */
+header, #services, #contact, footer {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1d1d1f;
+    color: #fff;
+    border-radius: 12px;
+    margin: 10px;
+}
+
+.cta-button {
+    background-color: #007aff;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #005bb5;
+}
+
+/* Estilo general para la sección de servicios */
+#services {
+    display: flex;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services-container {
+    display: flex;
+    width: 100%;
+}
+
+.services-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los botones */
+}
+
+.service-button {
+    background-color: #ffc107; /* Color amarillo mango */
+    color: #fff; /* Color del texto */
+    padding: 20px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    text-align: center; /* Alinea el texto en el centro */
+    font-weight: 600; /* Negrita para el texto */
+    display: block; /* Hace que el div ocupe todo el espacio */
+    cursor: default; /* Cambia el cursor para indicar que no es clicable */
+    user-select: none; /* Previene la selección del texto */
+}
+
+.service-button:hover {
+    background-color: #e0a800; /* Color al pasar el cursor (opcional) */
+}
+
+.photos-container {
+    flex: 2;
+    display: flex;
+    justify-content: space-between; /* Espacio entre las fotos */
+}
+
+.photo-item {
+    width: 190px; /* Tamaño de las fotos */
+    height: 190px; /* Tamaño de las fotos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Hace que las fotos sean circulares */
+    overflow: hidden; /* Oculta el desbordamiento de las imágenes */
+    background-color: #f5f5f7; /* Color de fondo opcional para las fotos */
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen dentro del círculo */
+}
+
+
+/* Adaptaciones para pantallas medianas y pequeñas */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: left;
+    }
+
+    header {
+        padding: 30px 10px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    #services {
+        padding: 30px 10px;
+    }
+
+    .service-item {
+        margin-bottom: 20px;
+    }
+
+    #contact {
+        padding: 30px 10px;
+    }
+
+    .whatsapp-button {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+
+    .nav-links li {
+        margin-bottom: 8px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+    }
+
+    #services {
+        padding: 20px 10px;
+    }
+
+    #contact {
+        padding: 20px 10px;
+    }
+
+    .whatsapp-button {
+        padding: 8px 16px;
+    }
+}
